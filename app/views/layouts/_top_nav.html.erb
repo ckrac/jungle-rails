@@ -8,6 +8,13 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">Jungle</a>
+      <span class="user" >
+        <% if current_user %>
+          Signed in as <%= current_user.email %> | <%= link_to "Logout", '/logout' %>
+        <% else %>
+          <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+        <% end %>
+      </span>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
