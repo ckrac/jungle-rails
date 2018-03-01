@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @products = LineItem.where(order_id: params[:id])
+
   end
 
   def create
@@ -10,6 +11,7 @@ class OrdersController < ApplicationController
     order  = create_order(charge)
 
     if order.valid?
+      #Tell the UserMailer to send an email after order processed
       empty_cart!
       redirect_to order, notice: 'Your Order has been placed.'
     else
