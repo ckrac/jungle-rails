@@ -1,16 +1,20 @@
 
-<h2>Add a review</h2>
+<h4 class="review-form">Add a review</h2>
+
 
 <%= form_for( [@product, @revew] ) do |form| %>
 
-  <p>
+  <div class="form-group">
     <%= form.label :description %><br>
     <%= form.text_area :description %>
-  </p>
-  <p>
+  </div>
+  <div>
     <%= form.label :rating %>
     <%= form.select :rating, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]], 5) %></p>
-  <p>
+  <div class="form-group">
     <%= form.submit %>
-  </p>
+  </div>
 <% end %>
+
+
+

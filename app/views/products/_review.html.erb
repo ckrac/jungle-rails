@@ -1,9 +1,9 @@
-
-<div>Rating</div>
-<div> <%= review.description %> </div>
-<div> <%= review.rating %> </div>
-
+<span class="review-desc"><%= review.description %></span>
 <% if current_user.id == review.user_id %>
-    <%= link_to fa_icon('trash'), [@product, review], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+    <span><%= link_to fa_icon('trash'), [@product, review], method: :delete, data: { confirm: "Are you sure?" } %></span>
 <% end %>
+<span class="review-rating"><%= review.rating %></span>
+<div style="clear: both;"></div>
+
+
 
