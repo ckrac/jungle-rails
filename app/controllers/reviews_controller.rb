@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  # before_filter :require_login
+
   def create
     @review = Review.new(review_params)
     @product = Product.find params[:product_id]
@@ -11,6 +13,12 @@ class ReviewsController < ApplicationController
     else
       redirect_to :back, notice: 'Review failed to create'
     end
+  end
+
+  def destroy
+    @del_review = Review.find params[:id]
+    @del_review.destroy
+    redirect_to :back, notice: 'Review deleted'
   end
 
   private

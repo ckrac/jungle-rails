@@ -25,11 +25,14 @@
         </dl>
       </div>
     </div>
+
+    <% if current_user %>
+      <%= render 'form' %>
+    <% end %>
+
     <% @reviews.each do |review| %>
           <%= render 'review', review: review %>
     <% end %>
-
-    <%= render 'form' %>
 
   </article>
 
