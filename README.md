@@ -2,15 +2,13 @@
 Jungle App Project
 =====================
 
-# Jungle
-
 A mini e-commerce application built with Rails 4.2. Jungle will allow users to shop online and make online purchases via stripe. Users can create reviews by submitting a description and rating to specific products. They will also be able to delete their own reviews. An admin can create categories and new products for the app.
 
 ## Screenshots
 
-!["Home page"]()
-!["Product detail"]()
-!["Cart"]()
+!["Home page"](https://github.com/ckrac/jungle-rails/blob/master/docs/home.png?raw=true)
+!["Product detail"](https://github.com/ckrac/jungle-rails/blob/master/docs/productDetails.png?raw=true)
+!["Cart"](https://github.com/ckrac/jungle-rails/blob/master/docs/cart.png?raw=true)
 
 
 ## Getting Started
