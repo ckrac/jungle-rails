@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
   has_secure_password
 
-  belongs_to :review
+  has_many :reviews
 end

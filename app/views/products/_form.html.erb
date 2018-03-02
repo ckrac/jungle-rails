@@ -1,0 +1,16 @@
+
+<h2>Add a review</h2>
+
+<%= form_for( [@product, @revew] ) do |form| %>
+
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+  <p>
+    <%= form.label :rating %>
+    <%= form.select :rating, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]], 5) %></p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
