@@ -8,7 +8,8 @@
     <h1>Thank you for your order</h1>
     <p>Order ID: <%= @order.id %></p>
     <p>Total amount is <%= @order.total_cents %></p>
-    <% LineItem.where(order_id: @order.id).each do |product| %>
+
+    <% @order.line_items.each do |product| %>
           <%= render 'product', product: product %>
     <% end %>
   </body>
