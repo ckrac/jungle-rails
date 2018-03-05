@@ -85,7 +85,7 @@ RSpec.describe User, type: :model do
 
   describe '.authenticate_with_credentials' do
     # examples for this class method here
-    it 'should return true if email and password matches' do
+    it 'should return a valid user if email and password matches' do
       @user = User.create!(first_name: 'Clark',
         last_name: 'Racadio',
         email: 'test10@test10.com',
@@ -94,5 +94,27 @@ RSpec.describe User, type: :model do
       expect(@user.authenticate_with_credentials(@user.email, @user.password)).to be_valid
       expect(@user.authenticate_with_credentials(@user.email, 'passssword')).to eq(nil)
     end
+
+    it 'should authenticate successfully if visitor types in spaces before and after their email address' do
+      @user = User.create!(first_name: 'Clark',
+        last_name: 'Racadio',
+        email: 'test15@test15.com',
+        password: 'password',
+        password_confirmation: 'password')
+      expect(@user.authenticate_with_credentials(' test15@test15.com ', @user.password)).to be_valid
+    end
+
+    it 'should authenticate successfully if a visitor types in the wrong case for their email' do
+      @user = User.create!(first_name: 'Clark',
+        last_name: 'Racadio',
+        email: 'test16@test16.com',
+        password: 'password',
+        password_confirmation: 'password')
+      expect(@user.authenticate_with_credentials('Test16@test16.coM', @user.password)).to be_valid
+    end
   end
 end
+
+
+
+

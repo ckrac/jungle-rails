@@ -20,7 +20,8 @@ class User < ActiveRecord::Base
         :uniqueness => { :case_sensitive => false }
   # private
     def authenticate_with_credentials(email, password)
-      @user = User.find_by_email(email)
+
+      @user = User.find_by_email(email.downcase.strip)
       if @user && @user.authenticate(password)
         @user
       else
