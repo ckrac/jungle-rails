@@ -18,4 +18,13 @@ class User < ActiveRecord::Base
         :presence => true,
         :format => { :with => email_regex },
         :uniqueness => { :case_sensitive => false }
+  # private
+    def authenticate_with_credentials(email, password)
+      @user = User.find_by_email(email)
+      if @user && @user.authenticate(password)
+        @user
+      else
+        nil
+      end
+    end
 end
