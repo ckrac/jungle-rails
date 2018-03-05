@@ -49,6 +49,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   # gem 'database_cleaner'
   # gem 'faker'
+  gem 'sqlite3', '1.3.13'
 end
 
 group :development do
