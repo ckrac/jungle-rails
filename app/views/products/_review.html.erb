@@ -1,5 +1,5 @@
 <div class="review-desc"><%= review.description %></div>
-<% if current_user.id == review.user_id %>
+<% if !current_user.nil? && current_user.id == review.user_id %>
     <div><%= link_to fa_icon('trash'), [@product, review], method: :delete, data: { confirm: "Are you sure?" } %></div>
 <% end %>
 

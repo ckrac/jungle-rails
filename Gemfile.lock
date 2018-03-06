@@ -44,10 +44,6 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap (4.0.0.beta)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (~> 1.11.1)
-      sass (>= 3.4.19)
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -125,7 +121,6 @@ GEM
       capybara (~> 2.1)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
-    popper_js (1.11.1)
     public_suffix (3.0.2)
     puma (3.5.2)
     quiet_assets (1.0.3)
@@ -238,7 +233,6 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  bootstrap (~> 4.0.0.beta)
   bootstrap-sass (~> 3.3.6)
   byebug
   capybara
