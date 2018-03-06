@@ -7,7 +7,7 @@ A mini e-commerce application built with Rails 4.2. Jungle will allow users to s
 ## Screenshots
 
 !["Home page"](https://github.com/ckrac/jungle-rails/blob/master/docs/home.png?raw=true)
-!["Product detail"](https://github.com/ckrac/jungle-rails/blob/master/docs/productDetails.png?raw=true)
+!["Product detail1"](https://github.com/ckrac/jungle-rails/blob/master/docs/productDetails1.png?raw=true)
 !["Cart"](https://github.com/ckrac/jungle-rails/blob/master/docs/cart.png?raw=true)
 
 
