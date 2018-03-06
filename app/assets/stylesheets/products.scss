@@ -112,14 +112,16 @@ textarea {
 }
 
 .star-rating {
-  line-height:32px;
-  font-size:1em;
+  line-height: 32px;
+  font-size: 1em;
 }
 
-// .star-rating .fa-star{color: yellow;}
-
 .checked {
-    color: orange;
+  color: orange;
+}
+
+.nonuser {
+  clear: both;
 }
 
 
