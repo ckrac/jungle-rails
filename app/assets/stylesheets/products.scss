@@ -99,17 +99,28 @@ textarea {
 .review-container {
   width: 60%;
   margin-bottom: 5px;
+  font-size: .8em;
 }
 
 .review-desc {
   float: left;
+  color: gray;
 }
 
 .review-rating {
   float: right
 }
 
+.star-rating {
+  line-height:32px;
+  font-size:1em;
+}
 
+// .star-rating .fa-star{color: yellow;}
+
+.checked {
+    color: orange;
+}
 
 
 

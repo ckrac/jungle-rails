@@ -1,9 +1,16 @@
-<span class="review-desc"><%= review.description %></span>
+<div class="review-desc"><%= review.description %></div>
 <% if current_user.id == review.user_id %>
-    <span><%= link_to fa_icon('trash'), [@product, review], method: :delete, data: { confirm: "Are you sure?" } %></span>
+    <div><%= link_to fa_icon('trash'), [@product, review], method: :delete, data: { confirm: "Are you sure?" } %></div>
 <% end %>
-<span class="review-rating"><%= review.rating %></span>
-<div style="clear: both;"></div>
 
-
-
+<div class="star-rating">
+  <% total_rating = review.rating %>
+  <% (0..4).each do |i| %>
+    <% if total_rating > 0 %>
+      <% total_rating = total_rating - 1 %>
+      <span class="fa fa-star checked"></span>
+    <% else %>
+      <span class="fa fa-star"></span>
+    <% end %>
+  <% end %>
+</div>
