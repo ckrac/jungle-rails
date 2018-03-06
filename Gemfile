@@ -45,10 +45,10 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'dotenv-rails'
   gem 'rspec-rails', '~> 3.5'
-  # gem 'factory_girl_rails'
   gem 'shoulda-matchers'
-  # gem 'database_cleaner'
-  # gem 'faker'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :development do
